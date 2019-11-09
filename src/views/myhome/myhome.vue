@@ -12,11 +12,16 @@
 				<Content style="height: 188px;width: 100%;padding: 30px 60px 50px 60px;background-color: #9caebf">
 					<my-title></my-title>
 				</Content>
-				<Content style="height: 800px;width: 100%;background-color: white">
-					Content
+				<Content style="height: auto;width: 100%;background-color: white">
+					<my-content></my-content>
 				</Content>
-				<Footer style="height: 220px;width: 100%;background-color: #9caebf">
-					Footer
+				<Row style="background-color: white;height: 150px;padding: 50px;text-align: center;">
+					<Col>
+						<Page :total="100" />
+					</Col>
+				</Row>
+				<Footer style="height: 150px;width: 100%;background-color: #9caebf">
+					<my-footer></my-footer>
 				</Footer>
 			</Layout>
 		</Col>
@@ -26,12 +31,16 @@
 <script>
 	import MyHead from "@/views/myhead/myhead"
 	import MyTitle from "@/views/mytitle/mytitle"
+	import MyContent from "@/views/mycontent/mycontent"
+	import MyFooter from "@/views/myfooter/myfooter"
 
     export default {
         name: "myhome",
         components: {
             MyHead,
             MyTitle,
+            MyContent,
+            MyFooter,
         },
         data() {
             return {}
