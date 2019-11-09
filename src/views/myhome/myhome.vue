@@ -12,7 +12,7 @@
 				<Content style="height: 188px;width: 100%;padding: 30px 60px 50px 60px;background-color: #9caebf">
 					<my-title></my-title>
 				</Content>
-				<Content style="height: auto;width: 100%;background-color: white">
+				<Content style="height: auto;width: 100%;;background-color: #f9f9fb">
 					<my-content></my-content>
 				</Content>
 				<Row style="background-color: white;height: 150px;padding: 50px;text-align: center;">

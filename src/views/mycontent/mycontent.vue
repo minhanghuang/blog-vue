@@ -32,7 +32,7 @@
 </style>
 
 <template>
-	<Row style="height: auto;width: 100%;margin-top: 30px;">
+	<Row style="height: auto;width: 100%;margin-top: 30px">
 		<Col span="24" style="height: auto;width: 100%;">
 			<Row class="container">
 				<Col span="24" style="height: auto;width: 100%;">
