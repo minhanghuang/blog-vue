@@ -12,7 +12,7 @@
 			padding: 28px 0;
 			.content{
 				display: flex;
-				flex-flow:row;/*伸缩项目单行排列*/
+				flex-flow:row; /*伸缩项目单行排列*/
 				height: 100%;
 				width: 100%;
 				padding: 0;
@@ -29,6 +29,11 @@
 					margin: 0;
 					padding: 0;
 					color: rgb(99, 107, 111);
+					h2{
+						a{
+							
+						}
+					}
 					.tag{
 						display: inline-block;
 						font-weight:bold;
