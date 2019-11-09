@@ -31,7 +31,25 @@
 					color: rgb(99, 107, 111);
 					h2{
 						a{
-							
+							color: #34495e;
+							cursor: pointer;
+							font-family:lato-regular, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+							font-size: 24px;
+							font-weight: normal;
+							line-height: 29px;
+							text-decoration-style: solid;
+							text-decoration: none;
+						}
+						a:hover{
+							color: #18bc9c;
+						}
+					}
+					div{
+						span{
+							color: #7f8c8d;
+							font-family:lato-regular, "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+							font-size: 19.6px;
+							line-height: 19.6px;
 						}
 					}
 					.tag{
@@ -44,6 +62,14 @@
 						background-color: #e8e8e8;
 						color: rgba(0,0,0,.6);
 						border-radius: 5px
+					}
+					.info{
+						a{
+							color: #18bc9c;
+							font-size: 14px;
+							line-height: 24px;
+							text-decoration-style:solid;
+						}
 					}
 				}
 			}
@@ -86,12 +112,12 @@
 								</a>
 							</div>
 							<div class="info" style="color: #95a5a6">
-								<Icon type="md-person" />
-								admin ,
-								<Icon type="ios-time-outline" />
-								一天前 ,
-								<Icon type="ios-eye-outline" />
-								1000
+								<Icon size="17" type="md-person" />
+									admin ,
+								<Icon size="16" type="ios-time-outline" />
+									一天前 ,
+								<Icon size="17" type="ios-eye-outline" />
+									1000
 								<a style="float: right">
 									Read More >
 								</a>
