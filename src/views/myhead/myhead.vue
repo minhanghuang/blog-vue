@@ -1,6 +1,12 @@
 <style lang="scss" scoped>
-	a{
-		color: white;
+
+	.myhead{
+		a{
+			color: white;
+			font-family: Lato, 微软雅黑, "Helvetica Neue", Arial, Helvetica, sans-serif;
+			line-height: 24px;
+			text-decoration-style:solid;
+		}
 	}
 </style>
 
@@ -9,7 +15,7 @@
 		<Col span="24" style="height: 100%;width: 100%;">
 			<Row style="height: 100%;width: 100%;">
 				<Col span="8" style="background-color: #9caebf">
-					<Row>
+					<Row class="myhead">
 						<Col span="4" offset="8" style="background-color: #9caebf;">
 							<a>
 								文章
