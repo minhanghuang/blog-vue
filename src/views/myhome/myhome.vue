@@ -9,7 +9,7 @@
 				<Header style="height: 64px;width: 100%;background-color: #9caebf">
 					<my-head></my-head>
 				</Header>
-					<my-main></my-main>
+					<router-view></router-view>
 				<Footer style="height: 150px;width: 100%;background-color: #9caebf">
 					<my-footer></my-footer>
 				</Footer>
