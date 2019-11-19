@@ -1,20 +1,19 @@
 <template>
 	<div id="app">
-		sss
 		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-export default {
-  name: 'App'
-}
+	export default {
+		name: 'App'
+	}
 </script>
 
 <style>
 	#app {
 		box-sizing: border-box;
-		font-family: 'Avenir', Helvetica, Arial, sans-serif;
+		font-family:"Roboto Slab", Georgia, serif;
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		text-align: left;
