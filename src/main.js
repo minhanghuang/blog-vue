@@ -9,7 +9,7 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 import store from './../store/index'
 import axios from "./api/";
-import '../my-theme/index.less'; // 自定义主题
+// import '../my-theme/index.less'; // 自定义主题
 
 // 按需加载element组件
 import 'element-ui/lib/theme-chalk/index.css'

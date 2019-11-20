@@ -1,7 +1,7 @@
 <style lang="scss" scoped>
 	.content{
 		min-height: 400px;
-		background-color: #c0bfba;
+		/*background-color: #c0bfba;*/
 		margin: 0 auto; /*水平居中*/
 		position: relative; /*脱离文档流*/
 		top: 50%; /*偏移*/
@@ -10,7 +10,7 @@
 			width: 100%;
 			height: 100%;
 			padding: 5px;
-			background-color: #c678dd;
+			/*background-color: #c678dd;*/
 			.log{
 				img{
 					height: 120px;
@@ -18,11 +18,30 @@
 				}
 			}
 			.title{
+				text-decoration-style:solid;
+				font-weight: 700;
 				font-family:Raleway, "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 				margin: 8px 0;
 			}
+			.title:hover {
+				color: white;
+			}
+			.bt_group{
+				margin-top: 25px;
+				.home_bt{
+					margin: 0 6px;
+					background: #515a6e;
+					border-color: #515a6e;
+				}
+				.home_bt:hover {
+					background: white;
+					color: #515a6e;
+				}
+			}
+
 		}
 	}
+
 </style>
 
 <template>
@@ -37,10 +56,14 @@
 							</div>
 							<div class="title">
 								<h1>
-									@{HOME: MINHANG};
+									#Minhang的博客#
 								</h1>
 							</div>
-
+							<div class="bt_group">
+								<Button class="home_bt" type="primary" shape="circle" size="large">Home</Button>
+								<Button class="home_bt" type="primary" shape="circle" size="large">Timeline</Button>
+								<Button class="home_bt" type="primary" shape="circle" size="large">About</Button>
+							</div>
 						</div>
 					</div>
 				</Col>

@@ -4,13 +4,14 @@
 		background-attachment:fixed;
 		height: 100%;
 		width: 100%;
+		/*opacity:0.5;*/
 	}
 </style>
 
 <template>
 	<Row style="height: 100%;width: 100%;">
 		<Col style="height: 100%;width: 100%;">
-			<div class="bg" style="background-image: url(https://cdn.pupboss.com/images/blog/2017/02/blog-cover.jpg)">
+			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/Yosemite3.jpg')+')'}">
 				<my-content></my-content>
 			</div>
 		</Col>
