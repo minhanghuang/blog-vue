@@ -37,7 +37,6 @@
 	}
 	.content{
 		height: auto;
-		background-color: #56b6c2;
 	}
 	.footer{
 		height: 100px;
@@ -75,7 +74,7 @@
 			</Row>
 			<Row>
 				<Col span="24" class="content">
-					bbb
+					<mymain-content></mymain-content>
 				</Col>
 			</Row>
 			<Row>
@@ -88,9 +87,13 @@
 </template>
 
 <script>
+	import MymainContent from "@/views/mymain/content/"
+
     export default {
         name: "MyMain",
-        components: {},
+        components: {
+            MymainContent,
+        },
         data() {
             return {}
         },
