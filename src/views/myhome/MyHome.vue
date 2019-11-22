@@ -11,7 +11,7 @@
 <template>
 	<Row style="height: 100%;width: 100%;">
 		<Col style="height: 100%;width: 100%;">
-			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/Yosemite3.jpg')+')'}">
+			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/2.png')+')'}">
 				<my-content></my-content>
 			</div>
 		</Col>

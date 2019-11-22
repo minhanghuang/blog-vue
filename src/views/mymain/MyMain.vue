@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
 	.top{
-		height: 260px;
+		height: 401px;
 		background-color:#9caebf;
 		.title{
 			min-height: 130px;
@@ -45,7 +45,7 @@
 </style>
 
 <template>
-	<Row style="height: 100%">
+	<Row style="height: 100%;background-color: #eee">
 		<Col span="24" style="height: 100%;">
 			<Row>
 				<Col span="24" class="top">
@@ -54,7 +54,7 @@
 							<div class="title">
 								<div class="blog_name">
 									<h1>
-										# Minhang的博客 #
+										# 想好再说 #
 									</h1>
 								</div>
 								<div class="button">
