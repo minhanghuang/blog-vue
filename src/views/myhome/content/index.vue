@@ -31,7 +31,7 @@
 				margin-top: 25px;
 				.home_bt{
 					margin: 0 6px;
-					background: #515a6e;
+					background: rgba(81,90,110,0.5);
 					border-color: #515a6e;
 				}
 				.home_bt:hover {

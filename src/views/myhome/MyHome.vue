@@ -4,7 +4,6 @@
 		background-attachment:fixed;
 		height: 100%;
 		width: 100%;
-		/*opacity:0.5;*/
 	}
 </style>
 
@@ -12,7 +11,9 @@
 	<Row style="height: 100%;width: 100%;">
 		<Col style="height: 100%;width: 100%;">
 			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/2.png')+')'}">
-				<my-content></my-content>
+				<div style="height: 100%;width: 100%;background: rgba(81,90,110,0.4)">
+					<my-content></my-content>
+				</div>
 			</div>
 		</Col>
 	</Row>

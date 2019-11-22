@@ -42,6 +42,14 @@
 				}
 			}
 		}
+		.foot{
+			height: 100px;
+			.page{
+				height: 35px;
+				padding: 32.5px 0;
+				text-align: center;
+			}
+		}
 	}
 	@media only screen and (min-width: 768px){
 		.box{
@@ -69,7 +77,7 @@
 						<div class="box">
 							<div class="block" v-for="k in 4">
 								<div class="img_article">
-									<img src="../../../assets/Sierra2.jpg" style="height: 200px;width: 528px">
+									<img src="https://cdn.pigjian.com/cover/2018/03/01/HlFgqAjAvIiSN96GGk1ZZSf5Igq3Njx7gnLJEkSd.png" style="height: 200px;width: 528px">
 								</div>
 								<div class="centent_article">
 									<div class="ititle">
@@ -86,6 +94,11 @@
 								<div class="footer_article">
 
 								</div>
+							</div>
+						</div>
+						<div class="foot">
+							<div class="page">
+								<Page :total="100" />
 							</div>
 						</div>
 					</div>

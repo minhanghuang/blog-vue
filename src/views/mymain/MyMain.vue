@@ -40,7 +40,7 @@
 	}
 	.footer{
 		height: 100px;
-		background-color: #61aeee;
+		background-color: #9caebf;
 	}
 </style>
 
