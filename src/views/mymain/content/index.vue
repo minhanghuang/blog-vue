@@ -16,11 +16,34 @@
 				width: 100%;
 				padding: 0;
 				margin: 0;
+				border-radius:10px;
 				.block_item{
 					height: 100%;
 					width: 100%;
 					margin: 40px 0;
-					padding: 0 10px;
+					padding: 0;
+					.img_article{
+						display: inline-block;
+						border-bottom-left-radius: 10px;
+						border-top-left-radius: 10px;
+						width: 55%;
+						height: 100%;
+						background-color: #9caebf;
+						/*background-image: url("https://yremp.live/wp-content/uploads/2019/11/linux用户管理-e1573309802376-1024x635.jpg");*/
+						/*background-position: center center;*/
+						img{
+							height: 100%;
+							width: 100%;
+							border-bottom-left-radius: 10px;
+							border-top-left-radius: 10px;
+						}
+					}
+					.centent_article{
+						display: inline-block;
+						width: 40%;
+						height: 100%;
+						background-color: #61aeee;
+					}
 				}
 			}
 		}
@@ -59,7 +82,12 @@
 						<div class="box">
 							<div class="block" v-for="k in 4">
 								<div class="block_item">
+									<div class="img_article">
+										<img src="https://yremp.live/wp-content/uploads/2019/11/linux用户管理-e1573309802376-1024x635.jpg">
+									</div>
+									<div class="centent_article">
 
+									</div>
 								</div>
 							</div>
 						</div>
