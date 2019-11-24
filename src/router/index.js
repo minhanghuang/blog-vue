@@ -4,6 +4,8 @@ import Test from '@/test/test'
 import MyHome from '@/views/myhome/MyHome'
 import MyMain from "@/views/mymain/MyMain"
 import MyArticle from "@/views/myarticle/MyArticle"
+import about from "@/views/myarticle/about"
+import detail from "@/views/myarticle/content"
 
 Vue.use(Router);
 
@@ -13,13 +15,6 @@ export default new Router({
             path: '/',
             name: 'MyHome',
             component: MyHome,
-            // redirect:"/",
-            // children:[
-            //     {
-            //         path: "/main",
-            //         component: () => import("@/views/mymain/MyMain")
-            //     },
-            // ]
         },
         {
             path: '/main',
@@ -30,6 +25,17 @@ export default new Router({
             path: '/article',
             name: 'MyArticle',
             component: MyArticle,
+            redirect:"/detail",
+            children:[
+                {
+                    path: "/detail",
+                    component: detail,
+                },
+                {
+                    path: "/about",
+                    component: about,
+                },
+            ]
         },
         {
             path: '/test',

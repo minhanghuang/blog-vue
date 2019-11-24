@@ -87,16 +87,8 @@
 						<div class="content_box">
 							<Row>
 								<Col span="18" offset="3" style="min-height: 700px">
-									<mavon-editor
-										v-model="value"
-										:editable="false"
-										:toolbarsFlag="false"
-										:subfield="false"
-										:boxShadow="false"
-										defaultOpen="preview"
-										style="min-height: 700px"
-									>
-									</mavon-editor>
+<!--									<myarticle-content></myarticle-content>-->
+									<router-view></router-view>
 								</Col>
 							</Row>
 						</div>
@@ -117,9 +109,15 @@
 </template>
 
 <script>
+
+    import MyarticleContent from "@/views/myarticle/content"
+
+
     export default {
         name: "MyArticle",
-        components: {},
+        components: {
+            MyarticleContent,
+        },
         data() {
             return {
                 value:"# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello"

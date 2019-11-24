@@ -119,7 +119,8 @@
 							<div class="block" v-for="k in 4">
 								<div class="block_item">
 									<div class="img_article">
-										<img src="https://yremp.live/wp-content/uploads/2019/11/linux用户管理-e1573309802376-1024x635.jpg">
+<!--										<img src="https://yremp.live/wp-content/uploads/2019/11/linux用户管理-e1573309802376-1024x635.jpg">-->
+										<img src="https://cdn.pigjian.com/cover/2018/10/11/mzcJBgfUXAJWC7E4YOqcysOP4L7vXvadI71nSCtS.jpg">
 									</div>
 									<div class="centent_article">
 										<div class="con_centent_article">
