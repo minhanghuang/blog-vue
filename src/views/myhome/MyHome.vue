@@ -10,7 +10,7 @@
 <template>
 	<Row style="height: 100%;width: 100%;">
 		<Col style="height: 100%;width: 100%;">
-			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/2.png')+')'}">
+			<div class="bg" :style="{backgroundImage:'url('+require('../../assets/57a823a5e1a51.jpg')+')'}">
 				<div style="height: 100%;width: 100%;background: rgba(81,90,110,0.4)">
 					<my-content></my-content>
 				</div>

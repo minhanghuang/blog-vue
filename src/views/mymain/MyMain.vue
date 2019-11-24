@@ -18,22 +18,27 @@
 			.button{
 				margin: 15px 0;
 				.bt{
-					background-color: #9caebf;
+					background: rgba(81,90,110,0);
+					/*border-color: #515a6e;*/
+					color: white;
+					/*background-color: #9caebf;*/
 					font-size: 20px;
 					padding: 0;
 					border: 0;
 				}
 				.bt:hover{
-					color: white;
+					color: #515a6e;
 				}
 				.bt_{
-					background-color: #9caebf;
+					background: rgba(81,90,110,0);
+					/*background-color: #9caebf;*/
+					color: white;
 					font-size: 20px;
 					padding: 0;
 					border: 0;
 				}
 				.bt_:hover{
-					color: black;
+					color: white;
 				}
 			}
 		}
@@ -43,7 +48,7 @@
 	}
 	.footer{
 		height: 100px;
-		background-color: #9caebf;
+		background-color: rgb(251, 251, 251);
 	}
 </style>
 
@@ -57,7 +62,7 @@
 							<div class="title">
 								<div class="blog_name">
 									<h1>
-										# 想好再说 #
+										# 起风了 #
 									</h1>
 								</div>
 								<div class="button">
@@ -82,7 +87,11 @@
 			</Row>
 			<Row>
 				<Col span="24" class="footer">
-					ccc
+					<Row>
+						<Col span="8" offset="8" style="text-align: center;margin-top: 25px">
+							<img style="height: 45px;width: 105px" src="http://iview.talkingdata.com/dist/e1cf12c07bf6458992569e67927d767e.png" />
+						</Col>
+					</Row>
 				</Col>
 			</Row>
 		</Col>

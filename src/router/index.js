@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Test from '@/test/test'
 import MyHome from '@/views/myhome/MyHome'
 import MyMain from "@/views/mymain/MyMain"
+import MyArticle from "@/views/myarticle/MyArticle"
 
 Vue.use(Router);
 
@@ -24,6 +25,11 @@ export default new Router({
             path: '/main',
             name: 'MyMain',
             component: MyMain,
+        },
+        {
+            path: '/article',
+            name: 'MyArticle',
+            component: MyArticle,
         },
         {
             path: '/test',
