@@ -1,7 +1,10 @@
 <style lang="scss" scoped>
 	.top{
 		height: 401px;
-		background-color:#9caebf;
+		/*background-color:#9caebf;*/
+		background-image: url("https://yremp.live/wp-content/uploads/2019/08/sea-e1566225879119.jpg");
+		background-position: center;
+		background-size: cover;
 		.title{
 			min-height: 130px;
 			margin: 0 auto; /*水平居中*/
