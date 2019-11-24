@@ -62,8 +62,8 @@
 							</div>
 							<div class="bt_group">
 								<Button class="home_bt" @click="home_bt" type="primary" shape="circle" size="large">Home</Button>
-								<Button class="home_bt" type="primary" shape="circle" size="large">Timeline</Button>
-								<Button class="home_bt" type="primary" shape="circle" size="large">About</Button>
+								<Button class="home_bt" @click="timeline_bt" type="primary" shape="circle" size="large">Timeline</Button>
+								<Button class="home_bt" @click="about_bt" type="primary" shape="circle" size="large">About</Button>
 							</div>
 						</div>
 					</div>
@@ -88,6 +88,12 @@
             },
             log_bt:function () {
                 this.$router.push("main");
+            },
+            timeline_bt:function () {
+                this.$router.push("/main/timeline");
+            },
+            about_bt:function () {
+                this.$router.push("/main/about");
             }
 	    }
     }

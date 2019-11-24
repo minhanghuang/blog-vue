@@ -87,7 +87,6 @@
 						<div class="content_box">
 							<Row>
 								<Col span="18" offset="3" style="min-height: 700px">
-<!--									<myarticle-content></myarticle-content>-->
 									<router-view></router-view>
 								</Col>
 							</Row>
@@ -99,7 +98,7 @@
 				<Col span="24" class="footer">
 					<Row>
 						<Col span="8" offset="8" style="text-align: center;margin-top: 25px">
-							<img style="height: 45px;width: 105px" src="http://iview.talkingdata.com/dist/e1cf12c07bf6458992569e67927d767e.png" />
+							<img style="height: 45px;width: 105px;background-color: transparent" src="@/assets/iview_logo.png" />
 						</Col>
 					</Row>
 				</Col>
@@ -110,8 +109,7 @@
 
 <script>
 
-    import MyarticleContent from "@/views/myarticle/content"
-
+    import MyarticleContent from "@/views/mymain/content"
 
     export default {
         name: "MyArticle",
@@ -120,7 +118,7 @@
         },
         data() {
             return {
-                value:"# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello# Hello"
+
             }
         },
     }

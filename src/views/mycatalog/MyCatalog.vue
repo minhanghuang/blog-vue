@@ -2,7 +2,7 @@
 	.top{
 		height: 401px;
 		/*background-color:#9caebf;*/
-		background-image: url("https://yremp.live/wp-content/uploads/2019/08/sea-e1566225879119.jpg");
+		/*background-image: url("https://yremp.live/wp-content/uploads/2019/08/sea-e1566225879119.jpg"); // mycatalog_background.jpg*/
 		background-position: center;
 		background-size: cover;
 		.title{
@@ -56,7 +56,7 @@
 	<Row style="height: 100%;background-color: #eee">
 		<Col span="24" style="height: 100%;">
 			<Row>
-				<Col span="24" class="top">
+				<Col span="24" class="top" :style="{backgroundImage: 'url(' + require('@/assets/mycatalog_background.jpg') + ')'}">
 					<Row style="height: 100%;">
 						<Col span="8" offset="8" style="height: 100%;text-align: center;">
 							<div class="title">
@@ -66,11 +66,11 @@
 									</h1>
 								</div>
 								<div class="button">
-									<Button class="bt" type="text">Home</Button>
+									<Button class="bt" @click="home_bt" type="text">Home</Button>
 									<Button class="bt_" type="text">&nbsp;&nbsp;|&nbsp;&nbsp;</Button>
-									<Button class="bt" type="text">Timeline</Button>
+									<Button class="bt" @click="timeline_bt" type="text">Timeline</Button>
 									<Button class="bt_" type="text">&nbsp;&nbsp;|&nbsp;&nbsp;</Button>
-									<Button class="bt" type="text">About</Button>
+									<Button class="bt" @click="about_bt" type="text">About</Button>
 								</div>
 								<div>
 									<Icon type="logo-github" size="25" ></Icon>
@@ -89,7 +89,7 @@
 				<Col span="24" class="footer">
 					<Row>
 						<Col span="8" offset="8" style="text-align: center;margin-top: 25px">
-							<img style="height: 45px;width: 105px" src="http://iview.talkingdata.com/dist/e1cf12c07bf6458992569e67927d767e.png" />
+							<img style="height: 45px;width: 105px" src="@/assets/iview_logo.png" />
 						</Col>
 					</Row>
 				</Col>
@@ -99,7 +99,7 @@
 </template>
 
 <script>
-	import MymainContent from "@/views/mymain/content/"
+	import MymainContent from "@/views/mycatalog/content/"
 
     export default {
         name: "MyMain",
@@ -109,6 +109,17 @@
         data() {
             return {}
         },
+	    methods:{
+            home_bt:function () {
+                this.$router.push("main");
+            },
+            timeline_bt:function () {
+                this.$router.push("/main/timeline");
+            },
+            about_bt:function () {
+                this.$router.push("/main/about");
+            }
+	    }
     }
 </script>
 
