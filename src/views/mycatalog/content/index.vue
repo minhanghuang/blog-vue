@@ -116,7 +116,7 @@
 				<Col style="">
 					<div class="content">
 						<div class="box">
-							<div class="block" v-for="k in 4">
+							<div class="block" v-for="item in blog.response_data.results">
 								<div class="block_item">
 									<div class="img_article">
 										<img src="@/assets/demo_article_img.png">
@@ -126,19 +126,18 @@
 											<div class="box_centent_article">
 												<div class="title">
 													<div style="float: right">
-														<h3>Docker的安装以及简单使用</h3>
+														<h3>{{item.title}}</h3>
 													</div>
 												</div>
 												<div class="box_centent_article_time">
-<!--													<Icon type="ios-time" />-->
 													<div style="float: right">
 														<Icon type="ios-time-outline" />
-														1天前,
+														<Time :time="item.createdate" :interval="1" />
 													</div>
 												</div>
 												<div class="box_centent_article_centent">
 													<p>
-														Docker的安装以及简单使用 ，没错，最近突然想学一下Docker。简单的安装和使用之后发现，简直不要太舒服，真的是太方便了，专门写博客记录一下。这一篇
+														{{item.subtitle}}
 													</p>
 												</div>
 												<div class="box_centent_article_tags">
@@ -161,16 +160,52 @@
 					</div>
 				</Col>
 			</Row>
+			<Spin size="large" fix v-if="loadding"></Spin>
 		</Col>
 	</Row>
 </template>
 
 <script>
+
+    function get_article_list(self, params) {
+        // 获取文章列表 (函数包含获取文章状态api)
+        self.$api.api_all.get_article_list_api(
+            params
+        ).then((response)=>{
+            self.blog.response_data = response.data; // 完成的后端请求数据
+            self.$emit("get_list",response.data); // 将后端返回的数据全部传给父组件
+	        console.log("response.data:",response.data)
+        }).catch((error)=>{
+            self.$Message.error(error.response.data.msg);
+        });
+    }
+
     export default {
         name: "mycatalogcontent",
-        components: {},
+        components: {
+
+        },
         data() {
-            return {}
+            return {
+                blog:{
+                    response_data:{ // 后端返回的整个文章列表的数据
+                        count: 0, // 默认数量给0, 因为在模板中有使用这个数据, 给个默认值
+                        createdate: new Date(),
+                    }
+                },
+	            loadding: true, // 记载中,标记
+            }
+        },
+	    watch:{
+            blog:{
+                handler(newval, oldVal){
+					this.loadding = false; // 文章列表加载成功, 取消加载中
+                },
+                deep:true, // 深度监听
+            }
+	    },
+        created(){
+            get_article_list(this); // 获取文章列表 api
         },
     }
 </script>

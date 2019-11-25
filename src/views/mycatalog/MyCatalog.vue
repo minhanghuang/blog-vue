@@ -82,7 +82,9 @@
 			</Row>
 			<Row>
 				<Col span="24" class="content">
-					<mymain-content></mymain-content>
+					<mymain-content
+						@get_list="update_list"
+					></mymain-content>
 				</Col>
 			</Row>
 			<Row>
@@ -107,7 +109,11 @@
             MymainContent,
         },
         data() {
-            return {}
+            return {
+                blog:{
+                    response_data:{}
+                }
+            }
         },
 	    methods:{
             home_bt:function () {
@@ -118,6 +124,9 @@
             },
             about_bt:function () {
                 this.$router.push("/main/about");
+            },
+            update_list:function (response_data) {
+                this.blog.response_data = response_data.results; // 后端接口博文列表
             }
 	    }
     }
