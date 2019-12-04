@@ -168,7 +168,7 @@
 <script>
 
     function get_article_list(self, params) {
-        // 获取文章列表 (函数包含获取文章状态api)
+        // 获取文章列表
         self.$api.api_all.get_article_list_api(
             params
         ).then((response)=>{
