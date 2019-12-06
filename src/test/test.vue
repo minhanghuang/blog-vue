@@ -4,11 +4,7 @@
 
 <template>
 	<div>
-		<div class="box" style="height: 300px;width: 300px;background-color: aquamarine;overflow: hidden">
-			<div class="box-child" style="height: 100px;width: 100px;background-color: #abb2bf;margin-top: 10px">
-
-			</div>
-		</div>
+		<img src="https://raw.githubusercontent.com/Coxhuang/yosoro/master/20191205213627-image.png">
 	</div>
 </template>
 
