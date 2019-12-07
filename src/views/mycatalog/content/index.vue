@@ -11,7 +11,7 @@
 			margin: 0 auto;
 			padding: 0;
 			.block{
-				background-color: white;
+				/*background-color: white;*/
 				height: 300px;
 				width: 100%;
 				padding: 0;

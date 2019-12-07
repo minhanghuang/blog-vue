@@ -5,16 +5,15 @@
 <template>
 	<Row style="height: 100%;width: 100%;">
 		<Col style="height: 100%;width: 100%;">
-			aaa
+
 		</Col>
 	</Row>
+
 </template>
 
 <script>
-    import MyHeadercom from "@/components/myheader/herdercom/"
-
     export default {
-        name: "MymainTimeline",
+        name: "headerdetail",
         components: {},
         data() {
             return {}

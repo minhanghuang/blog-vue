@@ -6,13 +6,13 @@
 	<Row style="">
 		<Col style="">
 			<mavon-editor
-					v-model="value"
-					:editable="false"
-					:toolbarsFlag="false"
-					:subfield="false"
-					:boxShadow="false"
-					defaultOpen="preview"
-					style="min-height: 700px"
+				v-model="value"
+				:editable="false"
+				:toolbarsFlag="false"
+				:subfield="false"
+				:boxShadow="false"
+				defaultOpen="preview"
+				style="min-height: 700px"
 			>
 			</mavon-editor>
 		</Col>

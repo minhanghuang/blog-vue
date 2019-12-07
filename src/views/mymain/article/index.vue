@@ -3,18 +3,16 @@
 </style>
 
 <template>
-	<Row style="height: 100%;width: 100%;">
-		<Col style="height: 100%;width: 100%;">
-			aaa
+	<Row>
+		<Col>
+
 		</Col>
 	</Row>
 </template>
 
 <script>
-    import MyHeadercom from "@/components/myheader/herdercom/"
-
     export default {
-        name: "MymainTimeline",
+        name: "main_article",
         components: {},
         data() {
             return {}
