@@ -2,10 +2,6 @@
 	.content{
 		height: auto;
 	}
-	/*.footer{*/
-	/*	height: 100px;*/
-	/*	background-color: rgb(251, 251, 251);*/
-	/*}*/
 </style>
 
 <template>
@@ -18,15 +14,6 @@
 					></mymain-content>
 				</Col>
 			</Row>
-<!--			<Row>-->
-<!--				<Col span="24" class="footer">-->
-<!--					<Row>-->
-<!--						<Col span="8" offset="8" style="text-align: center;margin-top: 25px">-->
-<!--							<img style="height: 45px;width: 105px" src="@/assets/iview_logo.png" />-->
-<!--						</Col>-->
-<!--					</Row>-->
-<!--				</Col>-->
-<!--			</Row>-->
 		</Col>
 	</Row>
 </template>

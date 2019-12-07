@@ -22,12 +22,8 @@ export default new Router({
             path: '/main',
             name: 'MyMain',
             component: MyMain,
-            redirect:"/main/",
+            redirect:"/main/catalog/",
             children:[
-                {
-                    path: "/main/",
-                    component: MyMain,
-                },
                 {
                     path: "/main/catalog",
                     component: MyCatalog,
@@ -35,6 +31,10 @@ export default new Router({
                 {
                     path: "/main/timeline",
                     component: timeline,
+                },
+                {
+                    path: "/main/about",
+                    component: about,
                 },
             ]
         },

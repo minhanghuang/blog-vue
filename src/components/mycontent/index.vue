@@ -5,7 +5,7 @@
 <template>
 	<Row style="background-color: #eee">
 		<Col style="background-color: #eee">
-			<article-list></article-list>
+			<router-view></router-view>
 		</Col>
 	</Row>
 </template>
