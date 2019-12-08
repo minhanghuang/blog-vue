@@ -4,7 +4,13 @@
 
 <template>
 	<div>
-		<img src="https://raw.githubusercontent.com/Coxhuang/yosoro/master/20191205213627-image.png">
+		<div style="height: auto;background-color: #61aeee;margin-bottom: 10px">
+			<div style="height: auto;">
+				<h3>
+					aaaaaaaaa
+				</h3>
+			</div>
+		</div>
 	</div>
 </template>
 

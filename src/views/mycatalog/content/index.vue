@@ -57,8 +57,9 @@
 								margin: 0;
 								overflow:hidden;
 								.title{
-									height: 26px;
-									/*background-color: #9caebf;*/
+									height: auto;
+									margin-bottom: 10px;
+									padding: 0;
 									h3{
 										font-weight: bold;
 										font-size: 17.55px;
@@ -68,6 +69,8 @@
 								.box_centent_article_time{
 									height: 20px;
 									margin: 10px 0;
+									text-align: right;
+									/*background-color: #98c379;*/
 								}
 								.box_centent_article_centent{
 									max-height: 180px;
@@ -76,6 +79,7 @@
 								}
 								.box_centent_article_tags{
 									margin-top: 10px;
+									text-align: right;
 								}
 							}
 						}
@@ -119,18 +123,20 @@
 							<div class="block" v-for="item in blog.response_data.results">
 								<div class="block_item">
 									<div class="img_article">
-										<img src="@/assets/demo_article_img.png">
+										<img :src=item.image>
 									</div>
 									<div class="centent_article">
 										<div class="con_centent_article">
 											<div class="box_centent_article">
-												<div class="title">
-													<div style="float: right">
-														<h3>{{item.title}}</h3>
+												<div class="title" style="height: auto;margin-bottom: 10px;">
+													<div style="height: auto;margin-bottom: 10px">
+														<h3>
+															{{item.title}}
+														</h3>
 													</div>
 												</div>
 												<div class="box_centent_article_time">
-													<div style="float: right">
+													<div class="box_centent_article_time">
 														<Icon type="ios-time-outline" />
 														<Time :time="item.createdate" :interval="1" />
 													</div>
@@ -141,7 +147,7 @@
 													</p>
 												</div>
 												<div class="box_centent_article_tags">
-													<div style="float: right">
+													<div>
 														<Icon type="ios-bookmark-outline" size="16"/>
 														Ubuntu, Linux, Mac, Docker
 													</div>
@@ -154,7 +160,13 @@
 						</div>
 						<div class="foot">
 							<div class="page">
-								<Page :total="100" />
+<!--								<Page :total="100" />-->
+								<Page
+									:total="page_total"
+									:page-size="page_size"
+									@on-change="on_change_page"
+									show-total
+								></Page>
 							</div>
 						</div>
 					</div>
@@ -173,6 +185,8 @@
             params
         ).then((response)=>{
             self.blog.response_data = response.data; // 完成的后端请求数据
+            self.page_prop.total = response.data.count; // 总页数
+            self.page_prop.size = response.data.size; // 单页条数
             self.$emit("get_list",response.data); // 将后端返回的数据全部传给父组件
 	        console.log("response.data:",response.data)
         }).catch((error)=>{
@@ -194,6 +208,10 @@
                     }
                 },
 	            loadding: true, // 记载中,标记
+                page_prop:{
+                    total : 0, // 总页数
+                    size : 0, // 单页条数
+                }
             }
         },
 	    watch:{
@@ -204,9 +222,22 @@
                 deep:true, // 深度监听
             }
 	    },
+	    computed:{
+            page_total: function () { // 分页总页数
+                return this.page_prop.total
+            },
+            page_size: function () { // 单页条数
+                return this.page_prop.size
+            },
+	    },
         created(){
             get_article_list(this); // 获取文章列表 api
         },
+	    methods:{
+            on_change_page:function (callback_page) { // 点击页码, 回调参数
+                get_article_list(this, {"page":callback_page}); // 获取文章列表 api
+            },
+	    }
     }
 </script>
 
