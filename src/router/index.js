@@ -38,26 +38,11 @@ export default new Router({
                 },
             ]
         },
-        // {
-        //     path: '/main',
-        //     name: 'MyMain',
-        //     component: MyMain,
-        //     redirect:"/catalog",
-        //     children:[
-        //         {
-        //             path: "/main/detail",
-        //             component: detail,
-        //         },
-        //         {
-        //             path: "/main/about",
-        //             component: about,
-        //         },
-        //         // {
-        //         //     path: "/main/timeline",
-        //         //     component: timeline,
-        //         // },
-        //     ]
-        // },
+        {
+            path: '/detail',
+            name: 'Detail',
+            component: detail,
+        },
         {
             path: '/test',
             name: 'Test',

@@ -160,7 +160,6 @@
 						</div>
 						<div class="foot">
 							<div class="page">
-<!--								<Page :total="100" />-->
 								<Page
 									:total="page_total"
 									:page-size="page_size"

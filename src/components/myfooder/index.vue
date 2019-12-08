@@ -160,7 +160,7 @@
 									</div>
 									<div style="height: 45px;text-align: center;margin-top: 10px;position: relative">
 										<div style="height: 45px;text-align: center;display: inline-block">
-											<img style="height: 45px;width: auto;margin-right: 100px" src="https://camo.githubusercontent.com/728ce9f78c3139e76fa69925ad7cc502e32795d2/68747470733a2f2f7675656a732e6f72672f696d616765732f6c6f676f2e706e67" >
+											<img style="height: 45px;width: auto;margin-right: 100px" src="https://forum.vuejs.org/uploads/default/original/2X/5/555257b8c5e7ecf34ce4f9b952eeaf006adfa339.png" >
 										</div>
 										<div>
 											<span style="text-align: center;position: absolute;top: -10%;font-size: 35px;color: #0C4B33;" class="django">
