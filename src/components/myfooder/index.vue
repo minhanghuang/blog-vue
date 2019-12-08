@@ -2,12 +2,12 @@
 	.footer{
 		/*background-color: rgb(180, 193, 204);*/
 		background-color: rgb(33, 33, 33);
-		height: 351px;
+		height: 451px;
 		font-size: 14px;
 		font-weight: 400;
 		color: white;
 		.footer-main-height{
-			height: 233px;
+			height: 333px;
 		}
 		.footer-main{
 				width: 100%;
