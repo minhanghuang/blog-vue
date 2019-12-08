@@ -15,6 +15,12 @@ const api_all = {
             method: 'GET',
         })
     },
+    get_user_detail_api() { // 获取用户详细信息
+        return axios({
+            url: '/api/user/blog/detail-user/admin/',
+            method: 'GET',
+        })
+    },
 };
 
 export default api_all
