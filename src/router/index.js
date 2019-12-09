@@ -39,7 +39,7 @@ export default new Router({
             ]
         },
         {
-            path: '/detail',
+            path: '/main/detail',
             name: 'Detail',
             component: detail,
         },

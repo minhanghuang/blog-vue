@@ -9,7 +9,7 @@ const api_all = {
             params: params, // {"page":callback_page}
         })
     },
-    detail_article_list_api(id) { // 获取博文详细信息
+    get_article_detail_api(id) { // 获取博文详细信息
         return axios({
             url: '/api/article/blog/detail-article/'+id+'/',
             method: 'GET',
