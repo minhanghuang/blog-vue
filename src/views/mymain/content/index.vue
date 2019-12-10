@@ -7,6 +7,7 @@
 		<Col style="">
 			<my-header
 				:blog_data="blog.data"
+				@get_blog_data="get_data"
 			>
 			</my-header>
 			<Row style="margin-top: 60px">
@@ -65,7 +66,12 @@
                 this.blog.data = {}; // 返回空数据
                 this.loadding= false; // 关闭 loadding
             }
-        }
+        },
+	    methods:{
+            get_data:function () { // 从子组件获取文章详细数据
+
+            }
+	    }
     }
 </script>
 
