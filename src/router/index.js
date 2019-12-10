@@ -48,5 +48,11 @@ export default new Router({
             name: 'Test',
             component: Test,
         },
-    ]
+    ],
+    scrollBehavior (to, from, savedPosition) { // 解决vue页面之间跳转，页面不是在顶部的问题
+        return { x: 0, y: 0 }
+    }
 })
+
+
+

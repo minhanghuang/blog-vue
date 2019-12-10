@@ -39,6 +39,9 @@
 							border-top-left-radius: 10px;
 						}
 					}
+					.img_article:hover{
+						cursor:pointer
+					}
 					.centent_article{
 						display: block;
 						box-sizing: border-box;
@@ -64,6 +67,12 @@
 										font-weight: bold;
 										font-size: 17.55px;
 										color: #504E4E;
+									}
+								}
+								.title:hover{
+									cursor:pointer;
+									h3{
+										color: #ff9476;
 									}
 								}
 								.box_centent_article_time{
@@ -122,13 +131,13 @@
 						<div class="box">
 							<div class="block" v-for="item in blog.response_data.results">
 								<div class="block_item">
-									<div class="img_article">
+									<div class="img_article" @click="click_detail(item)">
 										<img :src=item.image>
 									</div>
 									<div class="centent_article">
 										<div class="con_centent_article">
 											<div class="box_centent_article">
-												<div class="title" style="height: auto;margin-bottom: 10px;">
+												<div class="title" style="height: auto;margin-bottom: 10px;" @click="click_detail(item)" >
 													<div style="height: auto;margin-bottom: 10px">
 														<h3>
 															{{item.title}}
@@ -236,6 +245,10 @@
             on_change_page:function (callback_page) { // 点击页码, 回调参数
                 get_article_list(this, {"page":callback_page}); // 获取文章列表 api
             },
+            click_detail:function (item) { // 进入文章详细页面
+                this.$store.commit("update_current_blog_id", item.id); // 将当前被查看的文章对应的id存到vuex中
+                this.$router.push("/main/detail");
+            }
 	    }
     }
 </script>

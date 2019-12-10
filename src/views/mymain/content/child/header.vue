@@ -74,10 +74,13 @@
     export default {
         name: "headerdetail",
         components: {},
-	    props:[],
+	    props:["blog_data"],
         data() {
             return {
-
+                blog:{
+                    blogid: -1, // 当前文章id
+                    data: {}, // http请求获取的文章详细数据
+                }
             }
         },
         methods:{
