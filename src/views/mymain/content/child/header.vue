@@ -15,31 +15,8 @@
 				color: white;
 				margin: 10px 0;
 			}
-			.button{
-				margin: 15px 0;
-				.bt{
-					background: rgba(81,90,110,0);
-					/*border-color: #515a6e;*/
-					color: white;
-					/*background-color: #9caebf;*/
-					font-size: 20px;
-					padding: 0;
-					border: 0;
-				}
-				.bt:hover{
-					color: #515a6e;
-				}
-				.bt_{
-					background: rgba(81,90,110,0);
-					/*background-color: #9caebf;*/
-					color: white;
-					font-size: 20px;
-					padding: 0;
-					border: 0;
-				}
-				.bt_:hover{
-					color: white;
-				}
+			.tags{
+				color: white;
 			}
 		}
 	}
@@ -49,19 +26,18 @@
 	<Row>
 		<Col span="24" class="top" :style="{backgroundImage: 'url(' + require('@/assets/mycatalog_background.jpg') + ')'}">
 			<Row style="height: 100%;">
-				<Col span="8" offset="8" style="height: 100%;text-align: center;">
+				<Col span="10" offset="8" style="height: 100%;text-align: center;">
 					<div class="title">
 						<div class="blog_name">
 							<h1>
 								# {{blog.data.title}} #
 							</h1>
 						</div>
-						<div class="button">
-							<Button class="bt" @click="home_bt" type="text">Home</Button>
-							<Button class="bt_" type="text">&nbsp;&nbsp;|&nbsp;&nbsp;</Button>
-							<Button class="bt" @click="timeline_bt" type="text">Timeline</Button>
-							<Button class="bt_" type="text">&nbsp;&nbsp;|&nbsp;&nbsp;</Button>
-							<Button class="bt" @click="about_bt" type="text">About</Button>
+						<div class="tags">
+							<span>
+								<Icon type="md-pricetags" />
+								{{this.tags_computed}}
+							</span>
 						</div>
 					</div>
 				</Col>
@@ -84,6 +60,20 @@
                 loadding: false
             }
         },
+	    computed:{
+            tags_computed:function () {
+                try {
+                    var blog_tags = JSON.parse(this.blog.data.tag);
+                    var tags = "";
+                    for (var key in blog_tags) {
+                        tags += blog_tags[key] + ", "
+                    }
+                }catch (e) {
+
+                }
+                return tags
+            }
+	    },
         created() {
             this.blog.blogid = this.$store.getters.get_current_blog_id; // 获取当前文章id
             if (this.blog.blogid > 0){
