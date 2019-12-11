@@ -53,7 +53,7 @@
 					<div class="title">
 						<div class="blog_name">
 							<h1>
-								# 起风了 #
+								# {{blog.data.title}} #
 							</h1>
 						</div>
 						<div class="button">
@@ -80,7 +80,25 @@
                 blog:{
                     blogid: -1, // 当前文章id
                     data: {}, // http请求获取的文章详细数据
-                }
+                },
+                loadding: false
+            }
+        },
+        created() {
+            this.blog.blogid = this.$store.getters.get_current_blog_id; // 获取当前文章id
+            if (this.blog.blogid > 0){
+                this.$api.api_all.get_article_detail_api( // 获取用户详细信息
+                    this.blog.blogid
+                ).then((response)=>{
+                    this.blog.data = response.data.results[0];
+	                this.$emit("blog_data",response.data.results[0]); // 将后端数据传给父组件
+                    this.$emit("loadding_state",false); // 关闭loadding
+                }).catch((error)=>{
+                    this.$Message.error(error.response.data.msg);
+                });
+            }else { // 异常查看
+                this.$emit("blog_data",{}); // 将后端数据传给父组件
+                this.$emit("loadding_state",false); // 关闭loadding
             }
         },
         methods:{

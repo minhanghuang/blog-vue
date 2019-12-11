@@ -7,7 +7,8 @@
 		<Col style="">
 			<my-header
 				:blog_data="blog.data"
-				@get_blog_data="get_data"
+				@blog_data="get_blog_data"
+				@loadding_state="get_loadding_state"
 			>
 			</my-header>
 			<Row style="margin-top: 60px">
@@ -51,25 +52,28 @@
 	            }
             }
         },
-	    created() {
-            this.blog.blogid = this.$store.getters.get_current_blog_id; // 获取当前文章id
-		    if (this.blog.blogid > 0){
-                this.$api.api_all.get_article_detail_api( // 获取用户详细信息
-                    this.blog.blogid
-                ).then((response)=>{
-                    this.blog.data = response.data.results[0]; // 完成的后端请求数据
-                    this.loadding= false; // 关闭 loadding
-                }).catch((error)=>{
-                    this.$Message.error(error.response.data.msg);
-                });
-		    }else { // 异常查看
-                this.blog.data = {}; // 返回空数据
-                this.loadding= false; // 关闭 loadding
-            }
-        },
+	    // created() {
+        //     this.blog.blogid = this.$store.getters.get_current_blog_id; // 获取当前文章id
+		//     if (this.blog.blogid > 0){
+        //         this.$api.api_all.get_article_detail_api( // 获取用户详细信息
+        //             this.blog.blogid
+        //         ).then((response)=>{
+        //             this.blog.data = response.data.results[0]; // 完成的后端请求数据
+        //             this.loadding= false; // 关闭 loadding
+        //         }).catch((error)=>{
+        //             this.$Message.error(error.response.data.msg);
+        //         });
+		//     }else { // 异常查看
+        //         this.blog.data = {}; // 返回空数据
+        //         this.loadding= false; // 关闭 loadding
+        //     }
+        // },
 	    methods:{
-            get_data:function () { // 从子组件获取文章详细数据
-
+            get_blog_data:function (data) { // 从子组件获取文章详细数据
+                this.blog.data = data;
+            },
+            get_loadding_state:function (child_loadding) { // 从子组件中获取loadding
+				this.loadding = child_loadding;
             }
 	    }
     }
