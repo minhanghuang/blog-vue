@@ -3,7 +3,7 @@
 		height: 401px;
 		/*background-color:#9caebf;*/
 		/*background-image: url("https://yremp.live/wp-content/uploads/2019/08/sea-e1566225879119.jpg"); // mycatalog_background.jpg*/
-		background-position: center;
+		/*background-position: center;*/ // 居中显示
 		background-size: cover;
 		.title{
 			min-height: 130px;
@@ -48,7 +48,7 @@
 <template>
 <Row>
 	<Col span="24" class="top" :style="{backgroundImage: 'url(' + require('@/assets/header-bg.jpg') + ')'}">
-		<Row style="height: 100%;">
+		<Row style="height: 100%;background: rgba(40, 42, 45, 0.1)">
 			<Col span="8" offset="8" style="height: 100%;text-align: center;">
 				<div class="title">
 					<div class="blog_name">
