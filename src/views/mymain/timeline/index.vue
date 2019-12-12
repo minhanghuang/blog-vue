@@ -7,8 +7,13 @@
 <template>
 	<Row style="height: 100%;width: 100%;background-color: white">
 		<Col span="24" style="height: 100%;width: 100%;">
-			<Row style="width: 100%;min-height: 700px;background-color: white">
-				<Col span="8" offset="8" >
+			<Row style="width: 100%;min-height: 700px;background-color: white" type="flex" justify="center" align="middle">
+				<Col span="8" offset="1">
+					<div class="block" style="text-align: center">
+						<img src="../../../assets/cloudword.png">
+					</div>
+				</Col>
+				<Col span="8" offset="2" >
 					<div class="block">
 						<el-timeline>
 							<el-timeline-item timestamp="2019/10" placement="top" icon="el-icon-s-promotion" size='large' type='primary'>
