@@ -47,7 +47,7 @@
 
 <template>
 <Row>
-	<Col span="24" class="top" :style="{backgroundImage: 'url(' + require('@/assets/mycatalog_background.jpg') + ')'}">
+	<Col span="24" class="top" :style="{backgroundImage: 'url(' + require('@/assets/header-bg.jpg') + ')'}">
 		<Row style="height: 100%;">
 			<Col span="8" offset="8" style="height: 100%;text-align: center;">
 				<div class="title">

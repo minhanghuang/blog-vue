@@ -1,6 +1,7 @@
 <style lang="scss" scoped>
 	.block{
 		margin-top: 100px;
+		margin-bottom: 100px;
 	}
 </style>
 
@@ -8,12 +9,12 @@
 	<Row style="height: 100%;width: 100%;background-color: white">
 		<Col span="24" style="height: 100%;width: 100%;">
 			<Row style="width: 100%;min-height: 700px;background-color: white" type="flex" justify="center" align="middle">
-				<Col span="8" offset="1">
+				<Col span="8">
 					<div class="block" style="text-align: center">
 						<img src="../../../assets/cloudword.png">
 					</div>
 				</Col>
-				<Col span="8" offset="2" >
+				<Col span="8" offset="1" >
 					<div class="block">
 						<el-timeline>
 							<el-timeline-item timestamp="2019/10" placement="top" icon="el-icon-s-promotion" size='large' type='primary'>
@@ -48,7 +49,7 @@
 									<h4>大二</h4>
 									<p>使用单片机制作计算器,设计电路图发给工厂做出电路板</p>
 									<p>进入老师的实验室学习</p>
-									<p>暑假参加全国大学生电子设计竞赛,获得三等奖,作品(通过电磁自动寻迹小车)在全辽宁耗时第二</p>
+									<p>暑假参加全国大学生电子设计竞赛,获得三等奖,作品(通过电磁自动寻迹小车)在全辽宁用时第二名</p>
 								</el-card>
 							</el-timeline-item>
 							<el-timeline-item timestamp="2015/07" placement="top" icon="el-icon-s-promotion" size='large' type='primary'>
