@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import Test from '@/test/test'
 import MyHome from '@/views/myhome/MyHome'
 import MyCatalog from "@/views/mycatalog/MyCatalog"
-import MyArticle from "@/views/mymain/MyArticle"
 import MyMain from "@/views/mymain/MyMain"
 import about from "@/views/mymain/about"
 import detail from "@/views/mymain/content"
