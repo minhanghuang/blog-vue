@@ -70,7 +70,7 @@
         created(){
             this.$api.api_all.get_data_detail_api( // 发http请求, 获取用户data
             ).then((response)=>{ // 获取用户data
-                this.bottom.left.value = JSON.parse(response.data.results[0].timeline); // 更新用户资料, 更新后的数据, 同步到data中
+                this.bottom.left.value = JSON.parse(JSON.stringify(response.data.results[0].timeline)); // 更新用户资料, 更新后的数据, 同步到data中
 	            this.cloudword = response.data.results[0].cloudword;
 	            this.loadding = false;
             }).catch((error)=>{
